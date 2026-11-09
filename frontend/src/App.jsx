@@ -7,11 +7,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/health`)
+    fetch(`${API_URL}/api/health`)
       .then((res) => {
         if (!res.ok) throw new Error("API request failed");
         return res.json();
