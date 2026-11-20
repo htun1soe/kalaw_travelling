@@ -1,26 +1,7 @@
 
-import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [apiData, setApiData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const API_URL = import.meta.env.VITE_API_BASE_URL;
-
-
-  useEffect(() => {
-    fetch(`${API_URL}/api/health`)
-      .then((res) => {
-        if (!res.ok) throw new Error("API request failed");
-        return res.json();
-      })
-      .then(setApiData)
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, []);
-
   return (
     <div className="app">
       <nav className="navbar">
@@ -30,7 +11,6 @@ function App() {
         <div className="nav-links">
           <a href="#home">Home</a>
           <a href="#explore">Explore</a>
-          <a href="#about">About</a>
         </div>
         <a className="nav-button" href="#explore">Discover More</a>
       </nav>
@@ -73,41 +53,12 @@ function App() {
             ))}
           </div>
         </section>
-
-        <section className="api-section" id="about">
-          <div className="api-header">
-            <div>
-              <span className="section-label">DEVELOPER DASHBOARD</span>
-              <h2>Backend Connection</h2>
-              <p>Live response from your Laravel API.</p>
-            </div>
-
-            <div className="connection">
-              <span className={`status-dot ${loading ? "pending" : error ? "offline" : "online"}`} />
-              {loading ? "Connecting..." : error ? "Connection Failed" : "Backend Connected"}
-            </div>
-          </div>
-
-          <div className="api-grid">
-            <div className="api-card">
-              <span>STATUS</span>
-              <strong>{loading ? "Checking..." : apiData?.status || "Unavailable"}</strong>
-            </div>
-            <div className="api-card">
-              <span>MESSAGE</span>
-              <strong>{loading ? "Waiting..." : apiData?.message || error || "Unavailable"}</strong>
-            </div>
-            <div className="api-card">
-              <span>API VERSION</span>
-              <strong>{loading ? "Waiting..." : apiData?.version || "Unknown"}</strong>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer>
         <strong>🏔️ Kalaw Traveling</strong>
         <span>© 2026 Kalaw Traveling. Built with React + Laravel.</span>
+        <a href="/testing/">API testing</a>
       </footer>
     </div>
   );

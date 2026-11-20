@@ -1,0 +1,128 @@
+:root {
+  color: #24352c;
+  background: #f8f7f3;
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, p, pre, dd { margin: 0; }
+
+.testing-shell {
+  width: min(100% - 32px, 820px);
+  margin: 0 auto;
+  padding: clamp(24px, 6vw, 64px) 0;
+  display: grid;
+  gap: 20px;
+}
+
+.testing-home {
+  justify-self: start;
+  color: #294536;
+  font-size: .9rem;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+.testing-intro {
+  padding: clamp(24px, 5vw, 40px);
+  border-radius: 22px;
+  background: #203c2d;
+  color: #fff;
+}
+
+.testing-intro h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -.05em;
+}
+
+.testing-intro p { margin-top: 12px; color: #e0e9df; }
+
+.testing-panel {
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid #e4e7df;
+  border-radius: 18px;
+  background: #fff;
+  min-width: 0;
+}
+
+.testing-panel h2 { font-size: 1.2rem; letter-spacing: -.02em; }
+
+.test-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.test-endpoint {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #eef2eb;
+  font-size: .85rem;
+}
+
+.test-toolbar button {
+  padding: 10px 16px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 24px;
+  color: #fff;
+  background: #294536;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.test-toolbar button:disabled { opacity: .65; cursor: progress; }
+
+.test-checks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 254px), 1fr));
+  gap: 12px;
+}
+
+.test-status {
+  padding: 12px 14px;
+  border-radius: 9px;
+  color: #5a481f;
+  background: #f7efd9;
+}
+
+.test-status[data-state='passed'], .test-status[data-state='connected'] { color: #245037; background: #e7f3e9; }
+.test-status[data-state='failed'], .test-status[data-state='unavailable'], .test-status[data-state='timeout'] {
+  color: #862e29;
+  background: #f8e9e6;
+}
+.test-status[data-state='skipped'], .test-status[data-state='unknown'] { color: #58685d; background: #f5f6f2; }
+.test-status p { margin-top: 4px; font-size: .9rem; }
+.test-status .test-endpoint { max-width: 100%; overflow-wrap: anywhere; }
+
+.test-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 155px), 1fr));
+  gap: 12px;
+  margin: 20px 0 0;
+}
+
+.test-metrics > div { padding: 12px 14px; border-radius: 9px; background: #f5f6f2; }
+.test-metrics dt, .response-placeholder { color: #58685d; font-size: .88rem; }
+.test-metrics dd { margin-top: 4px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.test-response {
+  padding: 16px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  border-radius: 9px;
+  color: #eff7ee;
+  background: #203c2d;
+  font-size: .88rem;
+  tab-size: 2;
+}
+
+.test-response, .response-placeholder { margin-top: 12px; }

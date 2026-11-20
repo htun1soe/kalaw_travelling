@@ -131,13 +131,13 @@ a {
   margin: 90px auto;
 }
 
-.section-heading h2, .api-header h2 {
+.section-heading h2 {
   font-size: clamp(26px, 3vw, 36px);
   margin-top: 12px;
   letter-spacing: -1px;
 }
 
-.section-heading > p, .api-header > div > p {
+.section-heading > p {
   color: #849087;
   margin-top: 10px;
   font-size: 14px;
@@ -187,80 +187,6 @@ a {
   margin-top: 22px;
 }
 
-.api-section {
-  max-width: 1320px;
-  width: 88%;
-  margin: 0 auto 80px;
-  background: #203c2d;
-  color: white;
-  border-radius: 23px;
-  padding: 40px;
-}
-
-.api-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.api-header h2 {
-  font-size: 28px;
-}
-
-.api-header > div > p {
-  color: #aebcb1;
-}
-
-.connection {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,.1);
-  border-radius: 30px;
-  padding: 13px 18px;
-  font-size: 13px;
-}
-
-.status-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #eab77d;
-}
-
-.status-dot.online { background: #5bd68c; }
-.status-dot.offline { background: #ff7272; }
-.status-dot.pending { background: #eab77d; }
-
-.api-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 15px;
-  margin-top: 32px;
-}
-
-.api-card {
-  background: rgba(255,255,255,.09);
-  border-radius: 14px;
-  padding: 22px;
-  min-width: 0;
-}
-
-.api-card > span {
-  display: block;
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  color: #aebcb1;
-}
-
-.api-card strong {
-  display: block;
-  font-size: 17px;
-  margin-top: 12px;
-  overflow-wrap: anywhere;
-}
-
 footer {
   border-top: 1px solid #e9e9e1;
   padding: 28px 6%;
@@ -274,6 +200,12 @@ footer {
 
 footer strong {
   color: #294536;
+}
+
+footer a {
+  color: #294536;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 900px) {
@@ -314,28 +246,12 @@ footer strong {
     font-size: 45px;
   }
 
-  .explore, .api-section {
-    width: 92%;
-  }
-
   .explore {
+    width: 92%;
     margin: 65px auto;
   }
 
   .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .api-section {
-    padding: 25px 20px;
-  }
-
-  .api-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .api-grid {
     grid-template-columns: 1fr;
   }
 
