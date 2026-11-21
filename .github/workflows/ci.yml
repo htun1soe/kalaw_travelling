@@ -32,6 +32,7 @@ jobs:
           node-version: '24'
 
       - name: Setup Application
+        working-directory: backend
         run: |
           composer install --no-interaction --prefer-dist --no-progress
           cp -n .env.example .env
