@@ -61,6 +61,7 @@
             "pint --parallel --test"
         ],
         "ci:check": [
+            "@php artisan test",
             "Composer\\Config::disableProcessTimeout",
             "npm run check",
             "npm run types:check",
