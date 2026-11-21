@@ -1,0 +1,44 @@
+.client { min-height: 100vh; background: #faf8f4; color: #23302a; font-family: inherit; }
+.client a { color: inherit; }
+.client__header { display: flex; align-items: baseline; gap: .75rem; padding: 1rem clamp(1rem, 4vw, 3rem); background: #fff; border-bottom: 1px solid #e6e1d6; }
+.client__brand { font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+.client__tag { color: #6b7a70; font-size: .85rem; }
+.client__main { max-width: 1120px; margin: 0 auto; padding: 1.5rem clamp(1rem, 4vw, 2rem) 4rem; }
+.client__note { padding: 3rem 0; text-align: center; color: #6b7a70; }
+.client__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.client__bar h1 { margin: 0; font-size: 1.6rem; }
+.client__tabs { display: inline-flex; border: 1px solid #d8d2c4; border-radius: 8px; overflow: hidden; }
+.client__tabs button { padding: .5rem 1rem; border: 0; background: #fff; cursor: pointer; font: inherit; }
+.client__tabs .is-active { background: #2f5d46; color: #fff; }
+.client__filters { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0; }
+.client__filters input, .client__filters select { padding: .6rem .8rem; border: 1px solid #d8d2c4; border-radius: 8px; font: inherit; background: #fff; }
+.client__filters input { flex: 1 1 220px; }
+.client__grid, .client__gallery { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.card { display: block; text-decoration: none; background: #fff; border: 1px solid #e6e1d6; border-radius: 10px; overflow: hidden; height: 100%; }
+.card img, .card__empty { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.card__empty { display: grid; place-items: center; background: #ece7db; color: #6b7a70; }
+.card__body { padding: 1rem; display: grid; gap: .25rem; }
+.card__body h2 { margin: .25rem 0 0; font-size: 1.05rem; }
+.card__body p { margin: 0; color: #6b7a70; }
+.badge { display: inline-block; width: fit-content; padding: .15rem .6rem; border-radius: 99px; background: #e3eee7; color: #2f5d46; font-size: .75rem; font-weight: 600; }
+.client__gallery { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .75rem; }
+.client__gallery a { position: relative; display: block; border-radius: 8px; overflow: hidden; text-decoration: none; }
+.client__gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.client__gallery span { position: absolute; inset: auto 0 0; padding: .5rem .6rem; color: #fff; font-size: .8rem; background: linear-gradient(transparent, rgba(0,0,0,.65)); }
+.detail__back { display: inline-block; margin-bottom: 1rem; text-decoration: none; color: #2f5d46; }
+.detail__layout { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+.detail__main { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block; }
+.detail__thumbs { list-style: none; margin: .75rem 0 0; padding: 0; display: flex; gap: .5rem; flex-wrap: wrap; }
+.detail__thumbs button { padding: 0; border: 2px solid transparent; border-radius: 6px; overflow: hidden; cursor: pointer; background: none; }
+.detail__thumbs .is-active { border-color: #2f5d46; }
+.detail__thumbs img { width: 76px; height: 58px; object-fit: cover; display: block; }
+.detail h1 { margin: .5rem 0 0; }
+.detail__area { margin: .25rem 0; color: #6b7a70; }
+.detail__price { font-size: 1.3rem; font-weight: 700; margin: .5rem 0 1rem; }
+.detail__facts { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; margin: 0 0 1rem; }
+.detail__facts dt { color: #6b7a70; } .detail__facts dd { margin: 0; }
+.detail__description { white-space: pre-line; line-height: 1.6; }
+.detail__contacts { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+.detail__contacts li { display: grid; gap: .15rem; padding: .85rem 1rem; background: #fff; border: 1px solid #e6e1d6; border-radius: 8px; }
+.muted { color: #6b7a70; }
+@media (max-width: 800px) { .detail__layout { grid-template-columns: 1fr; } }

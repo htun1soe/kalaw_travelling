@@ -10,15 +10,17 @@ import OverviewPage from './pages/OverviewPage.jsx'
 import Trending from './pages/Trending.jsx'
 import DashboardLayout from './components/DashboardLayout.jsx'
 import Brand from './components/Brand.jsx'
+import ClientApp from './client/ClientApp.jsx'
 
 export default function App() {
+  const isClientRoute = /^\/housing(?:\/|$)/.test(useLocation().pathname)
   const [session, setSession] = useState({ status: isPreviewMode ? 'anonymous' : 'loading', user: null })
   const [attempt, setAttempt] = useState(0)
   const [notice, setNotice] = useState('')
   const location = useLocation()
 
   useEffect(() => {
-    if (isPreviewMode) return
+    if (isPreviewMode || isClientRoute) return
     let active = true
     auth.currentUser().then(
       (user) => { if (active) setSession({ status: 'ready', user }) },
@@ -30,7 +32,7 @@ export default function App() {
       },
     )
     return () => { active = false }
-  }, [attempt])
+  }, [attempt, isClientRoute])
 
   useEffect(() => {
     const expire = () => {
@@ -52,6 +54,8 @@ export default function App() {
     setNotice('You have signed out.')
     setSession({ status: 'anonymous', user: null })
   }
+
+  if (isClientRoute) return <ClientApp />
 
   if (session.status === 'loading' || session.status === 'error') return (
     <main className="session-screen">

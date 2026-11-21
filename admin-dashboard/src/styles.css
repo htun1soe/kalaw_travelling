@@ -304,3 +304,13 @@ tbody tr:hover { background: #fcfdf9; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Housing editor: dynamic contacts and photo management */
+.contact-section { margin: 1.25rem 0; padding: 1rem; border: 1px solid var(--line); border-radius: 9px; display: grid; gap: .75rem; }
+.contact-section legend { padding: 0 .4rem; font-weight: 600; }
+.contact-row { display: grid; gap: .75rem; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; align-items: end; }
+@media (max-width: 700px) { .contact-row { grid-template-columns: 1fr; } }
+.photo-grid { display: flex; flex-wrap: wrap; gap: .75rem; margin: .75rem 0; }
+.photo-grid figure { margin: 0; display: grid; gap: .35rem; justify-items: center; }
+.photo-grid img { width: 96px; height: 72px; object-fit: cover; border-radius: 6px; }
+.photo-grid .is-removed img { opacity: .35; }
