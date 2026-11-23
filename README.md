@@ -76,3 +76,7 @@ php backend/artisan serve --host=127.0.0.1 --port=8000
 - Use Home.jsx , Navbar.jsx , Hero.jsx for hero-section , Trending.jsx for trending section, ကျန်တာအဆင် ပြေသလိုလုပ်ရန်။
 - only front-end အရင်လုပ်ပါ။  ပုံ ေတွနဲ့ video ကို  mock data ထည့်စမ်းပါ။
 -.../src/ အောက်မှာ navbar dir တခု  home_page dir တခု ေအာက်မှာ ရေးရန်။
+
+## chank ko 
+
+-restaurent and hotel data တွေအတွက် data ပိုင်း  analysis and handling လုပ်ရန်
