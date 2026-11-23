@@ -20,6 +20,8 @@ npm run dev
 
 Open **http://127.0.0.1:3001** and enter the development username and password from `backend/.env`. The overview and collections use sample content. Reloading or signing out resets sample edits.
 
+The login page uses a photograph of Pangetkon in the Shan Hills, © Vyacheslav Argenberg / [Vascoplanet](http://www.vascoplanet.com/). The bundled image was resized and converted to WebP and is cropped to fit the screen. [Original photograph](https://commons.wikimedia.org/wiki/File:Pangetkon,_Shan_Hills,_Myanmar,_Landscape_with_a_tree_amidst_green_hills,_remote_location_in_rural_Myanmar_near_Kalaw_village.jpg) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 To demo sample screens without an account, start the development server with `VITE_AUTH_MODE=preview npm run dev` and choose **Preview dashboard**. Production builds require super-admin sign-in.
 
 ## Build and check

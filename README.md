@@ -1,5 +1,7 @@
 # Kalaw Travelling
 
+[Database flow and local setup](docs/DATABASE.md) · [Table purposes and relationships](docs/DATABASE_TABLES.md) · [Schema diagram and column reference](docs/DATABASE_SCHEMA.md)
+
 ## Progress on November 20, 2026
 
 ### Public frontend and diagnostics

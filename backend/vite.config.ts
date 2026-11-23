@@ -70,7 +70,6 @@ export default defineConfig({
             'resources/views/mail/*',
         ],
         sortTailwindcss: {
-            functions: ['clsx', 'cn', 'cva'],
             stylesheet: 'resources/css/app.css',
         },
     },
